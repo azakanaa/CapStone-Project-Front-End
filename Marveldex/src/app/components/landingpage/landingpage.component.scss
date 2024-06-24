@@ -1,0 +1,181 @@
+#background {
+    background-image: url("../../../assets/IMG_1624.JPG");
+    display: block;
+    background-size: cover;
+    /* or 'contain' or other values */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    /* Colore nero con opacità 0.5 */
+    z-index: 1;
+}
+
+h1,
+#background p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    flex-wrap: wrap;
+}
+
+#contenuto {
+    width: 70%;
+    margin-left: 0;
+    text-align: left !important;
+}
+
+/* media query */
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 35px;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    #contenuto {
+        position: relative;
+        z-index: 2;
+        /* Colore del testo in bianco per contrastare con l'overlay scuro */
+        padding: 20px;
+    }
+
+    #background p {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 481px) {
+    h1 {
+        font-size: 50px;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    #contenuto {
+        position: relative;
+        z-index: 2;
+        /* Colore del testo in bianco per contrastare con l'overlay scuro */
+        padding: 20px;
+    }
+
+    #background p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1025px) {
+    h1 {
+        position: relative;
+        font-size: 90px;
+        text-shadow: 0.5px 0.5px 5px #b40000;
+    }
+
+    #contenuto {
+        position: relative;
+        z-index: 2;
+        /* Colore del testo in bianco per contrastare con l'overlay scuro */
+        padding: 20px;
+    }
+
+    #background p {
+        font-size: 27px;
+    }
+}
+
+/* navbar */
+
+@font-face {
+    font-family: "Marvel";
+    src: url('../../../assets/MarvelRegular-Dj83.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 20px;
+    z-index: 1000; /* Assicura che la navbar sia sopra il contenuto */
+}
+
+#titolo {
+    font-family: "Marvel", sans-serif;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-size: 70px;
+}
+
+/* bottoni */
+.Btn {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+  .svgIcon {
+    width: 16px;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .Btn::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+  }
+  
+  .Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+  }
+  
+  .Btn:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+  }
