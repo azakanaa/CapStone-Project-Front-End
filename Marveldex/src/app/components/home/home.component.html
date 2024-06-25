@@ -1,1 +1,12 @@
-<p>home works! aaaaaaaaa</p>
+<ng-container *ngFor="let character of characters" class="d-flex">
+    <div id="container" class="d-flex">
+        <div class="card d-flex" id="{{character.id}}">
+            <div class="card-image">
+                <img src={{character.immagine}} />
+            </div>
+            <div class="card-text">
+                <h2>{{character.alias}}</h2>
+            </div>
+        </div>
+    </div>
+</ng-container>

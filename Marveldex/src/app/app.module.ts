@@ -13,6 +13,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LandingpageComponent } from './components/landingpage/landingpage.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AuthService } from './auth/auth.service';
+import { TokenInterceptor } from './auth/token.interceptor';
 
 const routes: Route[] = [
   {
@@ -57,9 +59,16 @@ const routes: Route[] = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

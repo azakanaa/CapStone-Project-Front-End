@@ -1,33 +1,64 @@
 <div id="background">
-    <form>
+    <form (ngSubmit)="signin()">
         <div class="contenitore1 d-flex">
             <div class="brutalist-container">
-                <input placeholder="Inserisci nome" class="brutalist-input smooth-type me-lg-3" type="text" />
-                <label class="brutalist-label">NOME</label>
+                <input 
+                id="nome"
+                name="nome"
+                placeholder="Inserisci nome" 
+                class="brutalist-input smooth-type me-lg-3" 
+                type="text"
+                [(ngModel)]="sign.nome" 
+                required />
+                <label for="nome" class="brutalist-label">NOME</label>
             </div>
             <div class="brutalist-container">
-                <input placeholder="Inserisci cognome" class="brutalist-input smooth-type" type="text" />
-                <label class="brutalist-label">COGNOME</label>
+                <input 
+                id="cognome"
+                name="cognome"
+                placeholder="Inserisci cognome" 
+                class="brutalist-input smooth-type" 
+                type="text"
+                [(ngModel)]="sign.cognome"
+                required />
+                <label for="cognome" class="brutalist-label">COGNOME</label>
             </div>
         </div>
         <div class="contenitore2 d-flex">
         <div class="brutalist-container">
-            <input placeholder="Inserisci e-mail" class="brutalist-input smooth-type" type="email" />
-            <label class="brutalist-label">E-MAIL</label>
+            <input 
+            id="email"
+            name="email"
+            placeholder="Inserisci e-mail" 
+            class="brutalist-input smooth-type" 
+            type="email" 
+            [(ngModel)]="sign.email"
+            required />
+            <label for="email" class="brutalist-label">E-MAIL</label>
         </div>
         <div class="brutalist-container">
-            <input placeholder="Inserisci username" class="brutalist-input smooth-type" type="text" />
-            <label class="brutalist-label">USERNAME</label>
+            <input 
+            id="username"
+            name="username"
+            placeholder="Inserisci username" 
+            class="brutalist-input smooth-type" 
+            type="text"
+            [(ngModel)]="sign.username"
+            required />
+            <label for="username" class="brutalist-label">USERNAME</label>
         </div>
     </div>
-        <div class="contenitore3 d-flex">
+        <div class="contenitore3">
             <div class="brutalist-container">
-                <input placeholder="Inserisci password" class="brutalist-input smooth-type" type="password" />
+                <input 
+                id="password"
+                name="password"
+                placeholder="Inserisci password" 
+                class="brutalist-input smooth-type" 
+                type="password"
+                [(ngModel)]="sign.password"
+                required />
                 <label class="brutalist-label">PASSWORD</label>
-            </div>
-            <div class="brutalist-container">
-                <input placeholder="Inserisci password" class="brutalist-input smooth-type" type="password" />
-                <label class="brutalist-label">CONFERMA PASSWORD</label>
             </div>
         </div>
         <button class="Btn">
