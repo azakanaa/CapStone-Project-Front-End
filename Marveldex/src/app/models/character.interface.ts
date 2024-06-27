@@ -8,7 +8,7 @@ export interface Character {
     descrizione: string;
     interprete: string;
     arma: string;
-    apparizioni: Array<string>;
-    abilita: Array<string>;
+    apparizioni: string[];
+    abilita: string[];
     inVita: boolean;
 }
