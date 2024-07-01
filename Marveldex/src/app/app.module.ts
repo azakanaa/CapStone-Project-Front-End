@@ -38,7 +38,7 @@ const routes: Route[] = [
     component: SignupComponent
   },
   {
-    path: '',
+    path: '#',
     component: LandingpageComponent
   }
 ]
