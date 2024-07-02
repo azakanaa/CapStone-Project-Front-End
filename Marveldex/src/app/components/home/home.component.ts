@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from 'src/app/models/character.interface';
+import { CharactersService } from 'src/app/service/characters.service';
 
 @Component({
   selector: 'app-home',
@@ -8,25 +9,40 @@ import { Character } from 'src/app/models/character.interface';
 })
 export class HomeComponent implements OnInit {
   characters: Character[] = [];
+  favorites: Character[] = [];
 
-  constructor() {}
+  constructor(private charService: CharactersService) {}
 
   ngOnInit(): void {
-    this.getCharacters().then((data) => {
-      console.log(data);  // Debug: stampa i dati caricati
-      this.characters = data;
-    }).catch((error) => {
-      console.error('Error loading characters:', error);  // Debug: stampa eventuali errori
-    });
+    this.loadCharacters();
+    this.loadFavorites();
   }
 
-  async getCharacters(): Promise<Character[]> {
-    const response = await fetch('../../../assets/db.json');  // Assicurati che il percorso sia corretto
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-    return data;
+  loadCharacters(): void {
+    this.charService.getCharacters().subscribe(
+      characters => {
+        console.log(characters);  // Debug: stampa i dati caricati
+        this.characters = characters;
+      },
+      error => {
+        console.error('Error loading characters:', error);  // Debug: stampa eventuali errori
+      }
+    );
   }
 
+  loadFavorites(): void {
+    this.charService.getFavorites().subscribe(
+      favorites => this.favorites = favorites,
+      error => console.error('Error loading favorites:', error)
+    );
+  }
+
+  isFavorite(character: Character): boolean {
+    return this.favorites.some(fav => fav.id === character.id);
+  }
+
+  toggleFavorite(character: Character): void {
+    this.charService.toggleFavorite(character);
+    this.loadFavorites(); // Aggiorna i preferiti dopo la modifica
+  }
 }

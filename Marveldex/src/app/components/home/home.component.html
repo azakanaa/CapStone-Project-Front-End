@@ -17,7 +17,7 @@
                     <img [src]="character.immagine" alt="{{character.alias}}" />
                 </div>
                 <div class="heart-container" title="Like">
-                    <input type="checkbox" class="checkbox" id="like">
+                    <input type="checkbox" class="checkbox" id="like" [checked]="isFavorite(character)" (change)="toggleFavorite(character)">
                     <div class="svg-container">
                         <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
                             <path
