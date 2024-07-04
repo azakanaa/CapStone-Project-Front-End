@@ -9,6 +9,9 @@ import { CharactersService } from 'src/app/service/characters.service';
 })
 export class FavoritesComponent implements OnInit {
   favorites: Character[] = [];
+  isModalOpen = false;
+  selectedCharacter: Character | null = null;
+  isVitaVisible = false;
 
   constructor(private charService: CharactersService) {}
 
@@ -30,5 +33,18 @@ export class FavoritesComponent implements OnInit {
   removeFromFavorites(character: Character): void {
     this.charService.toggleFavorite(character);
     this.loadFavorites(); // Ricarica i preferiti dopo la modifica
+  }
+
+  openModal(character: Character): void {
+    this.selectedCharacter = character;
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
+
+  toggleVitaVisibility() {
+    this.isVitaVisible = !this.isVitaVisible;
   }
 }

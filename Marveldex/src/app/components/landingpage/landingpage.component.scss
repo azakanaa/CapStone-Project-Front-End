@@ -2,7 +2,6 @@
     background-image: url("../../../assets/IMG_1624.JPG");
     display: block;
     background-size: cover;
-    /* or 'contain' or other values */
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -20,7 +19,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.35);
-    /* Colore nero con opacità 0.5 */
     z-index: 1;
 }
 
@@ -53,7 +51,6 @@ h1,
     #contenuto {
         position: relative;
         z-index: 2;
-        /* Colore del testo in bianco per contrastare con l'overlay scuro */
         padding: 20px;
     }
 
@@ -74,7 +71,6 @@ h1,
     #contenuto {
         position: relative;
         z-index: 2;
-        /* Colore del testo in bianco per contrastare con l'overlay scuro */
         padding: 20px;
     }
 
@@ -93,7 +89,6 @@ h1,
     #contenuto {
         position: relative;
         z-index: 2;
-        /* Colore del testo in bianco per contrastare con l'overlay scuro */
         padding: 20px;
     }
 
@@ -115,7 +110,7 @@ h1,
     display: flex;
     position: sticky;
     top: 20px;
-    z-index: 1000; /* Assicura che la navbar sia sopra il contenuto */
+    z-index: 1000;
 }
 
 #titolo {
@@ -130,6 +125,7 @@ h1,
 
 /* bottoni */
 .Btn {
+    font-family: monospace;
     width: 130px;
     height: 40px;
     display: flex;
@@ -141,7 +137,7 @@ h1,
     font-weight: 600;
     gap: 8px;
     cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    box-shadow: 5px 5px 0px #fff;
     position: relative;
     overflow: hidden;
     transition-duration: .3s;

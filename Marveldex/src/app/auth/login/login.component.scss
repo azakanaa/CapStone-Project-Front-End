@@ -3,7 +3,6 @@
         background-image: url("../../../assets/bg-1600px.jpg");
         display: block;
         background-size: cover;
-        /* or 'contain' or other values */
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh;
@@ -20,7 +19,6 @@
         background-image: url("../../../assets/bg-1024px.jpg");
         display: block;
         background-size: cover;
-        /* or 'contain' or other values */
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh;
@@ -226,6 +224,7 @@
 
   /* bottone */
   .Btn {
+    font-family: monospace;
     width: 130px;
     height: 40px;
     display: flex;
@@ -237,7 +236,7 @@
     font-weight: 600;
     gap: 8px;
     cursor: pointer;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    box-shadow: 5px 5px 0px #fff;
     position: relative;
     overflow: hidden;
     transition-duration: .3s;
@@ -274,23 +273,3 @@
     transform: translate(5px,5px);
     transition-duration: .3s;
   }
-
-  /* navbar */
- /*
-  #container-titolo {
-    background-color: #790102;
-  }
-
-  #titolo {
-    font-family: "Marvel", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 100px;
-    padding-top: 15%;
-  }
-  */
-
-
-

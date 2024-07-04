@@ -12,7 +12,6 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LandingpageComponent } from './components/landingpage/landingpage.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthService } from './auth/auth.service';
 import { TokenInterceptor } from './auth/token.interceptor';
 
@@ -40,6 +39,10 @@ const routes: Route[] = [
   {
     path: '',
     component: LandingpageComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ]
 
@@ -51,8 +54,7 @@ const routes: Route[] = [
     FavoritesComponent,
     LoginComponent,
     SignupComponent,
-    LandingpageComponent,
-    NavbarComponent
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,

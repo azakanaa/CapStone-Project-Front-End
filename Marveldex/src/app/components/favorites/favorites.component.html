@@ -27,6 +27,40 @@
                     </svg>
                 </div>
             </div>
+            <div>
+                <button (click)="openModal(character)" type="button" class="material-symbols-outlined"
+                    id="info">
+                    info
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modale -->
+<div id="myModal" class="modal" [ngClass]="{'show': isModalOpen}">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <div class="img-info-container d-flex">
+            <div class="img-container">
+                <img [src]="selectedCharacter?.immagine" alt="{{selectedCharacter?.alias}}" />
+            </div>
+            <div class="info-container">
+                <h2>{{selectedCharacter?.nome}} {{selectedCharacter?.cognome}}</h2>
+                <h3>alias: <b>{{selectedCharacter?.alias}}</b></h3>
+
+                <p><u>Razza</u>: {{selectedCharacter?.razza}}</p>
+                <p><u>Arma</u>: {{selectedCharacter?.arma}}</p>
+                <p><u>Interprete</u>: {{selectedCharacter?.interprete}}</p>
+                <p><u>Apparizioni</u>: {{selectedCharacter?.apparizioni?.join(', ')}}</p>
+                <p><u>Abilità</u>: {{selectedCharacter?.abilita?.join(', ')}}</p>
+                
+                <p><u>Piccola descrizione</u>: {{selectedCharacter?.descrizione}}</p>
+            </div>
+        </div>
+        <div>
+            <span *ngIf="isVitaVisible">{{selectedCharacter?.inVita}}</span>
+            <button (click)="toggleVitaVisibility()">Spoiler</button>
         </div>
     </div>
 </div>

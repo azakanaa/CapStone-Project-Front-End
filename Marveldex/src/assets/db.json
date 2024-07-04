@@ -6,7 +6,7 @@
         "alias": "Iron Man",
         "immagine": "https://assets.mycast.io/actor_images/actor-robert-downey-jr-179866_large.jpg?1614201217",
         "razza": "Umano",
-        "descrizione": "Geniale inventore miliardario, playboy e filantropo proprietario delle Stark Industries, Tony viene rapito in Vietnam rimanendo ferito dall'esplosione di una mina e, anziché costruire armi di distruzione di massa come ordinatogli dai suoi carcerieri, sfrutta il periodo della sua prigionia per costruire un'armatura che possa salvargli la vita e permettergli di fare ritorno in patria, dove assume l'identità di Iron Man divenendo un supereroe",
+        "descrizione": "Geniale inventore miliardario, playboy e filantropo proprietario delle Stark Industries, Tony viene rapito in Vietnam rimanendo ferito dall'esplosione di una mina e, anziché costruire armi di distruzione di massa come ordinatogli dai suoi carcerieri, sfrutta il periodo della sua prigionia per costruire un'armatura che possa salvargli la vita e permettergli di fare ritorno in patria, dove assume l'identità di Iron Man divenendo un supereroe.",
         "interprete": "Robert Downey Jr.",
         "arma": "Armatura Iron Man",
         "apparizioni": ["Iron Man (2008)", "Iron Man 2 (2010)", "The Avengers (2012)", "Iron Man 3 (2013)", "Avengers: Age of Ultron (2015)", "Captain America: Civil War (2016)", "Avengers: Infinity War (2018)", "Avengers: Endgame (2019)"],
@@ -37,7 +37,7 @@
         "descrizione": "Ispirato all'omonima divinità della mitologia norrena, Thor, l'erede al trono di Asgard, è il figlio di Odino e di Frigga. Grazie ai abilita derivatigli dal suo doppio retaggio e dal martello incantato, Thor è uno dei più forti e più importanti protettori di entrambi i mondi.",
         "interprete": "Chris Hemsworth",
         "arma": "Mjöllnir/Stormbreaker",
-        "apparizioni": ["Thor (2011)", "The Avengers (2012)", "Thor: The Dark World (2013)", "Avengers: Age of Ultron (2015)", "Thor: Ragnarok (2017)", "Avengers: Infinity War (2018)", "Avengers: Endgame (2019)", "Thor: Love and Thunder (2022)", "Guardians of the Galaxy Vol. 3 (2023)"],
+        "apparizioni": ["Thor (2011)", " The Avengers (2012)", "Thor: The Dark World (2013)", "Avengers: Age of Ultron (2015)", "Thor: Ragnarok (2017)", "Avengers: Infinity War (2018)", "Avengers: Endgame (2019)", "Thor: Love and Thunder (2022)", "Guardians of the Galaxy Vol. 3 (2023)"],
         "abilita": ["Forza, resistenza, agilità, velocità, longevità, riflessi e sensi sovrumani", "Manipolazione degli agenti atmosferici", "Degno di brandire il Mjolnir", "Abilità nel combattimento corpo a corpo e nell'uso delle armi bianche", "Manipolazione della materia, della materia oscura e dell'antimateria", "Fisiologia Asgardiana"],
         "inVita": true
     },
