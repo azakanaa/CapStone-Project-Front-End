@@ -52,6 +52,7 @@ export class HomeComponent implements OnInit {
   openModal(character: Character): void {
     this.selectedCharacter = character;
     this.isModalOpen = true;
+    this.isVitaVisible = false;
   }
 
   closeModal(): void {

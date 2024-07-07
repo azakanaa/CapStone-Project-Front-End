@@ -16,7 +16,7 @@
                     <img [src]="character.immagine" alt="{{character.alias}}" />
                 </div>
                 <div class="d-flex" id="cuoreinfo-container">
-                    <div class="heart-container" title="Like">
+                    <div class="heart-container me-3 mt-2" title="Like">
                         <input type="checkbox" class="checkbox" id="like" [checked]="isFavorite(character)"
                             (change)="toggleFavorite(character)">
                         <div class="svg-container">
@@ -41,8 +41,7 @@
                         </div>
                     </div>
                     <div>
-                        <button (click)="openModal(character)" type="button" class="material-symbols-outlined"
-                            id="info">
+                        <button type="button" class="material-symbols-outlined" id="info" (click)="openModal(character)">
                             info
                         </button>
                     </div>
@@ -66,16 +65,16 @@
 
                 <p><u>Razza</u>: {{selectedCharacter?.razza}}</p>
                 <p><u>Arma</u>: {{selectedCharacter?.arma}}</p>
+                <p><u>Abilità</u>: {{selectedCharacter?.abilita?.join(', ')}}</p>
                 <p><u>Interprete</u>: {{selectedCharacter?.interprete}}</p>
                 <p><u>Apparizioni</u>: {{selectedCharacter?.apparizioni?.join(', ')}}</p>
-                <p><u>Abilità</u>: {{selectedCharacter?.abilita?.join(', ')}}</p>
                 
                 <p><u>Piccola descrizione</u>: {{selectedCharacter?.descrizione}}</p>
             </div>
         </div>
-        <div>
-            <span *ngIf="isVitaVisible">{{selectedCharacter?.inVita}}</span>
-            <button (click)="toggleVitaVisibility()">Spoiler</button>
+        <div class="span-container">
+            <span *ngIf="isVitaVisible">{{selectedCharacter?.inVita ? 'Vivo' : 'Deceduto'}}</span>
+            <button  class="spoiler" (click)="toggleVitaVisibility()">Spoiler</button>
         </div>
     </div>
 </div>
