@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { CharactersComponent } from './components/characters/characters.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -19,10 +18,6 @@ const routes: Route[] = [
   {
     path: 'home',
     component: HomeComponent,
-  },
-  {
-    path: 'characters',
-    component: CharactersComponent,
   },
   {
     path: 'favorites',
@@ -50,7 +45,6 @@ const routes: Route[] = [
   declarations: [
     AppComponent,
     HomeComponent,
-    CharactersComponent,
     FavoritesComponent,
     LoginComponent,
     SignupComponent,
